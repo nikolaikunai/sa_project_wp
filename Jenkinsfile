@@ -46,6 +46,11 @@ pipeline {
       }
     }
     stage('Remove Unused docker image') {
+      when {
+        expression {
+        !stopPipeline
+        }
+      }
       steps {
         sh "docker rmi $registry:$BUILD_NUMBER"
         deleteDir()
