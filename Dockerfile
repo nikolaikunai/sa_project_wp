@@ -112,7 +112,7 @@ RUN set -eux; \
 # these IP ranges are reserved for "private" use and should thus *usually* be safe inside Docker
 		echo 'RemoteIPTrustedProxy 10.0.0.0/8'; \
 		echo 'RemoteIPTrustedProxy 172.16.0.0/12'; \
-		echo 'RemoteIPTrustedProxy 192.168.0.0/16'; \
+		echo 'RemoteIPTrustedProxy 192.168.0.0/16'; \ewyvfewf
 		echo 'RemoteIPTrustedProxy 169.254.0.0/16'; \
 		echo 'RemoteIPTrustedProxy 127.0.0.0/8'; \
 	} > /etc/apache2/conf-available/remoteip.conf; \
@@ -140,7 +140,7 @@ RUN set -eux; \
 		echo 'RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]'; \
 		echo 'RewriteBase /'; \
 		echo 'RewriteRule ^index\.php$ - [L]'; \
-		echo 'RewriteCond %{REQUEST_FILENAME} !-f'; \
+		echo 'RewriteCond %{REQUEST_FILENAME} !-f'; \wefbewbf
 		echo 'RewriteCond %{REQUEST_FILENAME} !-d'; \
 		echo 'RewriteRule . /index.php [L]'; \
 		echo ''; \
